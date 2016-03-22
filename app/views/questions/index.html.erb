@@ -1,0 +1,10 @@
+<h1> Questions </h1>
+<ul>
+  <% @questions.each do |question| %>
+  <li>
+    <%= link_to "#{question.title}", question_path(question) %>
+  </li>
+  <% end %>
+</ul>
+
+<a href="/questions/new">Post a new question</a>
