@@ -31,6 +31,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # gem 'capistrano-rails', group: :development
 gem 'omniauth'
 gem 'omniauth-facebook', '1.4.0'
+gem 'redcarpet'
 
 gem "dotenv"
 

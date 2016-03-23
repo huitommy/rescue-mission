@@ -6,7 +6,7 @@ class QuestionsController < ApplicationController
   def show
     @question = Question.find(params[:id])
     @answer = Answer.new
-    @answers = @question.answers.order(created_at: :asc)
+    @answers = @question.answers.order(best: :desc, created_at: :asc)
   end
 
   def new
@@ -24,7 +24,7 @@ class QuestionsController < ApplicationController
     @question.user_id = @current_user.id
 
     if @question.save
-      flash[:notice] = "Question was created successfully!"
+      flash[:notice] = 'Question was created noticefully!'
       redirect_to(@question)
     else
       render :new
@@ -35,13 +35,13 @@ class QuestionsController < ApplicationController
     current_user
     @question = Question.find(params[:id])
     @answer = Answer.new
-    @answers = @question.answers.order(created_at: :asc)
+    @answers = @question.answers.order(best: :desc, created_at: :asc)
 
     if @current_user.nil?
-      flash[:notice]= "Please sign in before editing"
+      flash[:notice] = 'Please sign in before editing'
       render :show
     elsif @current_user.id != @question.user_id
-      flash[:notice]= "Please sign in before editing"
+      flash[:notice] = 'Please sign in before editing'
       redirect_to root_url
     end
   end
@@ -49,7 +49,7 @@ class QuestionsController < ApplicationController
   def update
     @question = Question.find(params[:id])
     if @question.update(question_params)
-      flash[:notice] = "Question was updated successfully!"
+      flash[:notice] = 'Question was updated noticefully!'
       redirect_to(@question)
     else
       render :edit
@@ -63,15 +63,15 @@ class QuestionsController < ApplicationController
     @answers = @question.answers.order(created_at: :asc)
 
     if @current_user.nil?
-      flash[:notice]= "Please sign in before deleting a question"
+      flash[:notice] = 'Please sign in before deleting a question'
       render :show and return
     elsif @current_user.id != @question.user_id
-      flash[:notice]= "Please sign in before deleting this question"
+      flash[:notice] = 'Please sign in before deleting this question'
       redirect_to root_url and return
     end
 
     @question.destroy
-    flash[:notice] = "Question was deleted successfully!"
+    flash[:notice] = 'Question was deleted noticefully!'
     redirect_to root_url
   end
 

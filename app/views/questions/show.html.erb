@@ -1,31 +1,44 @@
-<h1> <%= @question.title %> </h1>
-<p> <%= @question.body %> </p>
+<h1>
+  Title: <%= @question.title %>
+</h1>
+<p>
+  Question: <%= @question.body %>
+</p>
 
-<%= link_to "Edit", edit_question_path(@question) %>
-<%= link_to "Delete", @question, method: :delete, data: { confirm: "Are you sure?" } %>
 
-<h1>Answer the question:</h1>
+
+<h1>Answers:</h1>
 
 <%= form_for [@question, @answer] do |f| %>
 
 <% if @answer.errors.any? %>
-  <div id="error_explanation">
-    <h2><%= pluralize(@answer.errors.count, "error") %> prohibited this question from being saved:</h2>
+<div id="error_explanation">
+  <h2><%= pluralize(@answer.errors.count, "error") %>
+    prohibited this question from being saved:</h2>
 
-    <ul>
+  <ul>
     <% @answer.errors.full_messages.each do |message| %>
-      <li><%= message %></li>
+    <li><%= message %></li>
     <% end %>
-    </ul>
-  </div>
+  </ul>
+</div>
 <% end %>
 
-  <% @answers.each do |answer| %>
-    <p> <%= answer.body %> </p>
+<% @answers.each do |t| %>
+<p>
+  <% if t.best %>
+  *** Best answer ***
   <% end %>
+  <%= t.body %>
+  <% unless t.best %>
+    <%= link_to "Best", answer_path(t), method: :put %>
+  <% end %>
+</p>
+<% end %>
+
 
 <div class="field">
-  <%= f.label :description %><br>
+  <%= f.label :description, "Answer" %><br>
   <%= f.text_field :body %>
 </div>
 
@@ -33,5 +46,12 @@
   <%= f.submit %>
 </div>
 <% end %>
-<br />
+
+<br/>
+<p>
+  <%= link_to "Edit Question", edit_question_path(@question) %>
+</p>
+<p>
+  <%= link_to "Delete Question", @question, method: :delete, data: { confirm: "Are you sure?" } %>
+</p>
 <a href="/">Go back to Questions page</a>
