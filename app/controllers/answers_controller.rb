@@ -1,23 +1,11 @@
 class AnswersController < ApplicationController
-  def index
-    @question = Quesiton.find(params[:question_id])
-    @answers = @question.answers
-  end
-
-  def new
-    @question = Quesiton.find(params[:question_id])
-    @answer = Answer.new
-  end
-
-  def show
-    @answer = Answer.find(params[:id])
-    @question = @answer.question
-  end
 
   def create
+    current_user
     @question = Question.find(params[:question_id])
     @answer = Answer.new(answer_params)
     @answer.question = @question
+    @answer.user_id = @current_user.id
     @answers = @question.answers.order(created_at: :asc)
 
     if @answer.save

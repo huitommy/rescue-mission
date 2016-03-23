@@ -7692,3 +7692,1215 @@ Processing by QuestionsController#index as HTML
   [1m[36mQuestion Load (0.4ms)[0m  [1mSELECT "questions".* FROM "questions"  ORDER BY "questions"."created_at" DESC[0m
   Rendered questions/index.html.erb within layouts/application (1.2ms)
 Completed 200 OK in 18ms (Views: 16.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2016-03-22 16:39:52 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by QuestionsController#index as HTML
+  [1m[35mQuestion Load (1.4ms)[0m  SELECT "questions".* FROM "questions"  ORDER BY "questions"."created_at" DESC
+  Rendered questions/index.html.erb within layouts/application (18.9ms)
+Completed 200 OK in 238ms (Views: 222.6ms | ActiveRecord: 6.6ms)
+
+
+Started GET "/auth/facebook" for ::1 at 2016-03-22 16:39:57 -0400
+(facebook) Request phase initiated.
+
+
+Started GET "/auth/facebook/callback?code=AQAFE_5EynHCT4-0fM99hF5_RJ1E7VPEjsDWZ5fd1ZrZlrQcOPtvlRbjepZC0IlvFkJFZGN8rci2GT5QWMKF5B0wr96trc6MRlhEx3T5tOXADaidSL1UXpOnimgtau0fd77LwPKG9ogYzZWS3AkPJc_lcDjGuSHU686x34Y6GeaD6HPY2HGMPIm1T2dxSff2iiPns_heA4ERO1Ah_PdBRkbydrejoOE7oOY8JbQp1QsW6lzAAQftqCE2tHAHRVTHp-V1hfCPR4yHqLqugPDxSY3WEm5kTYG0Hu-ZzsxWFQ4rLO9mLZ5zKb-aKaf0ApT0edFzDCZYgIynFh3d6NiIIaEN" for ::1 at 2016-03-22 16:39:57 -0400
+(facebook) Callback phase initiated.
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"AQAFE_5EynHCT4-0fM99hF5_RJ1E7VPEjsDWZ5fd1ZrZlrQcOPtvlRbjepZC0IlvFkJFZGN8rci2GT5QWMKF5B0wr96trc6MRlhEx3T5tOXADaidSL1UXpOnimgtau0fd77LwPKG9ogYzZWS3AkPJc_lcDjGuSHU686x34Y6GeaD6HPY2HGMPIm1T2dxSff2iiPns_heA4ERO1Ah_PdBRkbydrejoOE7oOY8JbQp1QsW6lzAAQftqCE2tHAHRVTHp-V1hfCPR4yHqLqugPDxSY3WEm5kTYG0Hu-ZzsxWFQ4rLO9mLZ5zKb-aKaf0ApT0edFzDCZYgIynFh3d6NiIIaEN", "provider"=>"facebook"}
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT  "users".* FROM "users"  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "users" SET "oauth_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["oauth_token", "CAAQ6PJVQL8UBACiaf3coZCyTZBI00KYfRFC6geTmm5AsqzlSMTpb8TfCDxgIZBGcZCQyMMn6DJjvUXoYWLUZCwHEZClvW1YDT2gDFBx6jTWO5NSnbkIZAnNtGXKuEN24BQZCyHUlUlOJZA0YkVXZB0dkkz2y5PZB3xery9LpdrNdao6qGuT3lBIJDZAtl615YBrQZB5UZD"], ["updated_at", "2016-03-22 20:39:58.319778"], ["id", 1]]
+  [1m[35m (1.2ms)[0m  COMMIT
+Redirected to http://localhost:3000/
+Completed 302 Found in 22ms (ActiveRecord: 4.5ms)
+
+
+Started GET "/" for ::1 at 2016-03-22 16:39:58 -0400
+Processing by QuestionsController#index as HTML
+  [1m[36mQuestion Load (0.3ms)[0m  [1mSELECT "questions".* FROM "questions"  ORDER BY "questions"."created_at" DESC[0m
+  Rendered questions/index.html.erb within layouts/application (1.1ms)
+  [1m[35mUser Load (1.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+Completed 200 OK in 19ms (Views: 16.8ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/signout" for ::1 at 2016-03-22 16:40:18 -0400
+Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-03-22 16:40:18 -0400
+Processing by QuestionsController#index as HTML
+  [1m[36mQuestion Load (0.4ms)[0m  [1mSELECT "questions".* FROM "questions"  ORDER BY "questions"."created_at" DESC[0m
+  Rendered questions/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 11ms (Views: 10.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/questions/new" for ::1 at 2016-03-22 16:40:21 -0400
+Processing by QuestionsController#new as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 9ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-03-22 16:40:21 -0400
+Processing by QuestionsController#index as HTML
+  [1m[35mQuestion Load (4.9ms)[0m  SELECT "questions".* FROM "questions"  ORDER BY "questions"."created_at" DESC
+  Rendered questions/index.html.erb within layouts/application (7.8ms)
+Completed 200 OK in 28ms (Views: 22.5ms | ActiveRecord: 4.9ms)
+
+
+Started GET "/auth/facebook" for ::1 at 2016-03-22 16:40:35 -0400
+(facebook) Request phase initiated.
+
+
+Started GET "/auth/facebook/callback?code=AQBArvxBE3S7ofC-aoNHT3EtZ4fYo7YStFrNxfUkh0mkUUqj6HzJtRw8v8ZO5EW69Lhgs4w4m0IAy0efEh9kGbPRJmUdYImHxHXUQqm8QoiszsQYc0WPr8FZX2KKBQrpFxvpsnH-P71EabYJmekpFGaZqpol5h87uTlExZ8L2OBzBNptbcnZCQWxOU__ML-DXdL6TV-_0uHC2Git1Rt7SyoZsGSvRqDz-2QEzlUL70lfYbifkBmYFpcKky5z5kqzIMtmUCNKIN1LF-9FAvFjyPyszX-w_lUKzz0Cc74Vqg3Uonh8aeAKsv7HihPizeYKLE-lt80Es4cqMTJUyugNlK-G" for ::1 at 2016-03-22 16:40:35 -0400
+(facebook) Callback phase initiated.
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"AQBArvxBE3S7ofC-aoNHT3EtZ4fYo7YStFrNxfUkh0mkUUqj6HzJtRw8v8ZO5EW69Lhgs4w4m0IAy0efEh9kGbPRJmUdYImHxHXUQqm8QoiszsQYc0WPr8FZX2KKBQrpFxvpsnH-P71EabYJmekpFGaZqpol5h87uTlExZ8L2OBzBNptbcnZCQWxOU__ML-DXdL6TV-_0uHC2Git1Rt7SyoZsGSvRqDz-2QEzlUL70lfYbifkBmYFpcKky5z5kqzIMtmUCNKIN1LF-9FAvFjyPyszX-w_lUKzz0Cc74Vqg3Uonh8aeAKsv7HihPizeYKLE-lt80Es4cqMTJUyugNlK-G", "provider"=>"facebook"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "users" SET "oauth_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["oauth_token", "CAAQ6PJVQL8UBAMARDZAHDZA2dtoVJAZBA2fTBxNbmo2WiikJZAUlxrUPHNkz5plrNgZCsEpLkJdcanUAZAAIDJBs2SGzN4CjvlzZC6rS0rSjbC9n3SbjyJdNCRhVSLyKy7JJkNBSiRSfh3ClfrgzGK4FjWjGp78QJGTGYyIZBXvYN4PfAqpvTJa4KZBtLPLkn1M4ZD"], ["updated_at", "2016-03-22 20:40:36.267714"], ["id", 1]]
+  [1m[35m (1.2ms)[0m  COMMIT
+Redirected to http://localhost:3000/
+Completed 302 Found in 6ms (ActiveRecord: 2.1ms)
+
+
+Started GET "/" for ::1 at 2016-03-22 16:40:36 -0400
+Processing by QuestionsController#index as HTML
+  [1m[36mQuestion Load (0.3ms)[0m  [1mSELECT "questions".* FROM "questions"  ORDER BY "questions"."created_at" DESC[0m
+  Rendered questions/index.html.erb within layouts/application (1.1ms)
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+Completed 200 OK in 16ms (Views: 15.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/signout" for ::1 at 2016-03-22 16:40:38 -0400
+Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-03-22 16:40:38 -0400
+Processing by QuestionsController#index as HTML
+  [1m[36mQuestion Load (0.3ms)[0m  [1mSELECT "questions".* FROM "questions"  ORDER BY "questions"."created_at" DESC[0m
+  Rendered questions/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 15ms (Views: 14.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/auth/facebook" for ::1 at 2016-03-22 16:40:44 -0400
+(facebook) Request phase initiated.
+
+
+Started GET "/auth/facebook/callback?code=AQDpEnmoQ7km3E3nrZ7z4z5B1kc3DeAigdZC6-gr5JiabBpsnT-nQBzo3hl6RkWiZw9scr8haHfVbkKJfNtceaA2qM5hmBzOljmypjm52s_-JqKzh9Gzmilvze_Jr9ak8F2zJ9wNElmxshSNJj72uD07W3M8yANSr3xiippq_5YlkaJWYLGF2v93uMfXrR7FGzJdmPE5TVks-knISTrOI3J5vSuBPvajDAQRArm9G6nrqxakCpBzJZ0F4kZ9sHxak8hihAk1Qa_08JLVFl6pkPfNoIe_TV_86PEmD5ODELQgVNdB5SdaiyE2tqx8aYpe0M_xaGyOE5SXszb6hlwNi7YQ" for ::1 at 2016-03-22 16:40:44 -0400
+(facebook) Callback phase initiated.
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"AQDpEnmoQ7km3E3nrZ7z4z5B1kc3DeAigdZC6-gr5JiabBpsnT-nQBzo3hl6RkWiZw9scr8haHfVbkKJfNtceaA2qM5hmBzOljmypjm52s_-JqKzh9Gzmilvze_Jr9ak8F2zJ9wNElmxshSNJj72uD07W3M8yANSr3xiippq_5YlkaJWYLGF2v93uMfXrR7FGzJdmPE5TVks-knISTrOI3J5vSuBPvajDAQRArm9G6nrqxakCpBzJZ0F4kZ9sHxak8hihAk1Qa_08JLVFl6pkPfNoIe_TV_86PEmD5ODELQgVNdB5SdaiyE2tqx8aYpe0M_xaGyOE5SXszb6hlwNi7YQ", "provider"=>"facebook"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users"  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "users" SET "oauth_token" = $1, "oauth_expires_at" = $2, "updated_at" = $3 WHERE "users"."id" = $4  [["oauth_token", "CAAQ6PJVQL8UBAOZAyV4l6ZAul46baZAsZCsQiKb66SiaUE05muU0mvaTvlmZCNfaryWs3g4kumD3fxYKptNB0rbGP6XJIxZCFNAzImMXvS7b03KjXVdtrIFKnBP3TieocFLeYdvwazIMFdUH4rEmFPHB4ZAFkOYXkxNm2oCIJvnk72rkU2uYQ1IZCRXGvdVnoZBcZD"], ["oauth_expires_at", "2016-05-21 18:42:19.000000"], ["updated_at", "2016-03-22 20:40:45.461098"], ["id", 1]]
+  [1m[36m (1.2ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 8ms (ActiveRecord: 2.1ms)
+
+
+Started GET "/" for ::1 at 2016-03-22 16:40:45 -0400
+Processing by QuestionsController#index as HTML
+  [1m[35mQuestion Load (0.3ms)[0m  SELECT "questions".* FROM "questions"  ORDER BY "questions"."created_at" DESC
+  Rendered questions/index.html.erb within layouts/application (1.2ms)
+  [1m[36mUser Load (1.6ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 21ms (Views: 19.1ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/questions/new" for ::1 at 2016-03-22 16:40:48 -0400
+Processing by QuestionsController#new as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered questions/new.html.erb within layouts/application (14.7ms)
+Completed 200 OK in 25ms (Views: 23.7ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/questions" for ::1 at 2016-03-22 16:40:52 -0400
+Processing by QuestionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"o4AnqgVtV3L8Gvyb3l1FSmkiTJvK+tDJTFG/1IzP1xJXF+ye+Dqkk5Qziod4E7iztFXsA3Pw9ARNuwfpM4II+Q==", "question"=>{"title"=>"", "body"=>""}, "commit"=>"Create Question"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  Rendered questions/new.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 16ms (Views: 12.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/signout" for ::1 at 2016-03-22 17:47:25 -0400
+Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-03-22 17:47:25 -0400
+Processing by QuestionsController#index as HTML
+  [1m[35mQuestion Load (0.9ms)[0m  SELECT "questions".* FROM "questions"  ORDER BY "questions"."created_at" DESC
+  Rendered questions/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 16ms (Views: 14.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/auth/facebook" for ::1 at 2016-03-22 17:47:27 -0400
+(facebook) Request phase initiated.
+
+
+Started GET "/auth/facebook/callback?code=AQA6lSozU7UyVbHUqGcomW1ykHNEzF7b28N9Bc0x5acHY8Y-wQCoRCFFQN8rpi4H4cPE_b5-ceFn_BXwEQ_yJzo2Wyw66DXalkdOmHwEfajgETO_RZgqrezhnIyV3KqwDkINSxGClNfks61Ox3Sv6VycrYlE_J3dV0ShJ2Ax0li5VFs4LxzGyh-6uUipXemJjywLdsr4N9LGsNDpynSOVQwrsvRXylKM1wmqfJe0COWZM-pxGOYugSx1pA5h37wPHnsxSdksoi82vxwVlqGo6b5EaQP_SK8hL5CKE64rMT_OHhBMsZwL8DVuItALE_z5aIo" for ::1 at 2016-03-22 17:47:27 -0400
+(facebook) Callback phase initiated.
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"AQA6lSozU7UyVbHUqGcomW1ykHNEzF7b28N9Bc0x5acHY8Y-wQCoRCFFQN8rpi4H4cPE_b5-ceFn_BXwEQ_yJzo2Wyw66DXalkdOmHwEfajgETO_RZgqrezhnIyV3KqwDkINSxGClNfks61Ox3Sv6VycrYlE_J3dV0ShJ2Ax0li5VFs4LxzGyh-6uUipXemJjywLdsr4N9LGsNDpynSOVQwrsvRXylKM1wmqfJe0COWZM-pxGOYugSx1pA5h37wPHnsxSdksoi82vxwVlqGo6b5EaQP_SK8hL5CKE64rMT_OHhBMsZwL8DVuItALE_z5aIo", "provider"=>"facebook"}
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users"  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.6ms)[0m  [1mUPDATE "users" SET "oauth_token" = $1, "oauth_expires_at" = $2, "updated_at" = $3 WHERE "users"."id" = $4[0m  [["oauth_token", "CAAQ6PJVQL8UBALad3QwUBUePGJhYbotgdPvgtZBlAhqBLdnDjdeuBllszXkJvOSOsWPCdWm3oI7SAuxTjQDXz3cC1GXFZCjXjTwI6K9FH0abyqNltr2yBajyQH7mBDlZALwpvNGXGJeRI9nv9cRCJR691WYDcnwohXG6nZAjDS0nnyO2ojKgOUYK2din7VEZD"], ["oauth_expires_at", "2016-05-21 18:42:18.000000"], ["updated_at", "2016-03-22 21:47:28.498556"], ["id", 1]]
+  [1m[35m (1.2ms)[0m  COMMIT
+Redirected to http://localhost:3000/
+Completed 302 Found in 8ms (ActiveRecord: 2.7ms)
+
+
+Started GET "/" for ::1 at 2016-03-22 17:47:28 -0400
+Processing by QuestionsController#index as HTML
+  [1m[36mQuestion Load (0.5ms)[0m  [1mSELECT "questions".* FROM "questions"  ORDER BY "questions"."created_at" DESC[0m
+  Rendered questions/index.html.erb within layouts/application (1.6ms)
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+Completed 200 OK in 17ms (Views: 15.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/signout" for ::1 at 2016-03-22 17:47:29 -0400
+Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-03-22 17:47:29 -0400
+Processing by QuestionsController#index as HTML
+  [1m[36mQuestion Load (0.5ms)[0m  [1mSELECT "questions".* FROM "questions"  ORDER BY "questions"."created_at" DESC[0m
+  Rendered questions/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 16ms (Views: 15.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/questions/new" for ::1 at 2016-03-22 17:47:31 -0400
+Processing by QuestionsController#new as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-03-22 17:47:31 -0400
+Processing by QuestionsController#index as HTML
+  [1m[35mQuestion Load (0.4ms)[0m  SELECT "questions".* FROM "questions"  ORDER BY "questions"."created_at" DESC
+  Rendered questions/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 11ms (Views: 10.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/questions/new" for ::1 at 2016-03-22 17:47:34 -0400
+Processing by QuestionsController#new as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-03-22 17:47:34 -0400
+Processing by QuestionsController#index as HTML
+  [1m[36mQuestion Load (0.3ms)[0m  [1mSELECT "questions".* FROM "questions"  ORDER BY "questions"."created_at" DESC[0m
+  Rendered questions/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 13ms (Views: 12.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/auth/facebook" for ::1 at 2016-03-22 17:47:36 -0400
+(facebook) Request phase initiated.
+
+
+Started GET "/auth/facebook/callback?code=AQAo0F7zhGv1ZDA3sCOVkOcFMEderRk0a4euykswscidBUsA7b8lxajBw8SmOHQzytax9iWy3MaG3nEl0oLDoKZr0MB5-2Z4PRHeeJMKMrdCA2XnrNUG-Fn0K8GEOPLVViAvBTn7g2moDgsmjGT7nLuBEftw2nnKVR4S0MPrJjjah53h1cE87PxIxe3iaQqUK-Fr4csuoobVRBcBXSLOmJMpFX-oJ9pK2RhH5h1l05S-LDGB6JfYYhLKnDN0lniZFtK7Eba-uqX36i4i_DP9jepgmuzilxxVEuryenkKd3Zf-FjWGjs_GbBFVaP281wsMWQ" for ::1 at 2016-03-22 17:47:36 -0400
+(facebook) Callback phase initiated.
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"AQAo0F7zhGv1ZDA3sCOVkOcFMEderRk0a4euykswscidBUsA7b8lxajBw8SmOHQzytax9iWy3MaG3nEl0oLDoKZr0MB5-2Z4PRHeeJMKMrdCA2XnrNUG-Fn0K8GEOPLVViAvBTn7g2moDgsmjGT7nLuBEftw2nnKVR4S0MPrJjjah53h1cE87PxIxe3iaQqUK-Fr4csuoobVRBcBXSLOmJMpFX-oJ9pK2RhH5h1l05S-LDGB6JfYYhLKnDN0lniZFtK7Eba-uqX36i4i_DP9jepgmuzilxxVEuryenkKd3Zf-FjWGjs_GbBFVaP281wsMWQ", "provider"=>"facebook"}
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users"  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "users" SET "oauth_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3  [["oauth_token", "CAAQ6PJVQL8UBADJOtn3j2bIPq34IHVJRsx08ohfgtMtAulZBd3PAFCuW3n9UrIm5yFoalNlbYVQa6wfBQ46In55J808aBb8jH8TaLaL1kZChwWrd3rvWQcx9eo7LfHDaO56mGlDdsGy65jweAkHZB1jp4qYOKt0LZBWdFSbQyAUcYQVEZBEay99D8vOp5HUAZD"], ["updated_at", "2016-03-22 21:47:36.708258"], ["id", 1]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 6ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/" for ::1 at 2016-03-22 17:47:36 -0400
+Processing by QuestionsController#index as HTML
+  [1m[35mQuestion Load (0.5ms)[0m  SELECT "questions".* FROM "questions"  ORDER BY "questions"."created_at" DESC
+  Rendered questions/index.html.erb within layouts/application (1.4ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 11ms (Views: 10.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/questions/new" for ::1 at 2016-03-22 17:47:39 -0400
+Processing by QuestionsController#new as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered questions/new.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 11ms (Views: 9.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/questions/3" for ::1 at 2016-03-22 17:47:41 -0400
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mQuestion Load (0.2ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mAnswer Load (0.5ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1  ORDER BY "answers"."created_at" ASC  [["question_id", 3]]
+  Rendered questions/show.html.erb within layouts/application (5.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 49ms (Views: 24.6ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/questions/2" for ::1 at 2016-03-22 17:47:43 -0400
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mQuestion Load (0.3ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mAnswer Load (0.4ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1  ORDER BY "answers"."created_at" ASC[0m  [["question_id", 2]]
+  Rendered questions/show.html.erb within layouts/application (2.3ms)
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+Completed 200 OK in 15ms (Views: 12.3ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/questions/3" for ::1 at 2016-03-22 17:47:44 -0400
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mQuestion Load (0.4ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mAnswer Load (0.3ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1  ORDER BY "answers"."created_at" ASC  [["question_id", 3]]
+  Rendered questions/show.html.erb within layouts/application (2.2ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 14ms (Views: 12.1ms | ActiveRecord: 0.9ms)
+
+
+Started DELETE "/questions/3" for ::1 at 2016-03-22 17:47:48 -0400
+Processing by QuestionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"+zfBq2jxMKoZcpmZeNLJu5OlULjHmWQg+tkt/R2d9ToPoAqflabDS3Fb74XenDRCTtLwIH6TQO37M5XAotAq0Q==", "id"=>"3"}
+  [1m[35mQuestion Load (1.0ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "questions" WHERE "questions"."id" = $1  [["id", 3]]
+  [1m[36m (1.2ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 5ms (ActiveRecord: 2.5ms)
+
+
+Started GET "/" for ::1 at 2016-03-22 17:47:48 -0400
+Processing by QuestionsController#index as HTML
+  [1m[35mQuestion Load (0.3ms)[0m  SELECT "questions".* FROM "questions"  ORDER BY "questions"."created_at" DESC
+  Rendered questions/index.html.erb within layouts/application (1.2ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 27ms (Views: 26.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/questions/2" for ::1 at 2016-03-22 17:47:49 -0400
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mQuestion Load (0.3ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mAnswer Load (0.3ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1  ORDER BY "answers"."created_at" ASC[0m  [["question_id", 2]]
+  Rendered questions/show.html.erb within layouts/application (3.0ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+Completed 200 OK in 19ms (Views: 16.8ms | ActiveRecord: 0.8ms)
+
+
+Started DELETE "/questions/2" for ::1 at 2016-03-22 17:47:53 -0400
+Processing by QuestionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"FyWynf9FgE8UVLFjpuxaatRburImtkOkqlQ7zWf9pM7jsnmpAhJzrnx9x38AoqeTCSwaKp+8Z2mrvoPw2LB7JQ==", "id"=>"2"}
+  [1m[36mQuestion Load (0.3ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "questions" WHERE "questions"."id" = $1[0m  [["id", 2]]
+  [1m[35m (1.3ms)[0m  COMMIT
+Redirected to http://localhost:3000/
+Completed 302 Found in 4ms (ActiveRecord: 1.9ms)
+
+
+Started GET "/" for ::1 at 2016-03-22 17:47:53 -0400
+Processing by QuestionsController#index as HTML
+  [1m[36mQuestion Load (0.4ms)[0m  [1mSELECT "questions".* FROM "questions"  ORDER BY "questions"."created_at" DESC[0m
+  Rendered questions/index.html.erb within layouts/application (1.0ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+Completed 200 OK in 11ms (Views: 10.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/questions/new" for ::1 at 2016-03-22 20:50:34 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by QuestionsController#new as HTML
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered questions/new.html.erb within layouts/application (23.3ms)
+Completed 200 OK in 250ms (Views: 200.1ms | ActiveRecord: 9.4ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-03-22 20:50:35 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-03-22 20:50:35 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-03-22 20:50:35 -0400
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2016-03-22 20:50:35 -0400
+
+
+Started POST "/questions" for ::1 at 2016-03-22 20:50:47 -0400
+Processing by QuestionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"G4uv0rIOb+mksvJIcE0wltSUa4ORO4CFmYgmO4romrTvHGTmT1mcCMybhFTWA81vCePLGygxpEiYYp4GNaVFXw==", "question"=>{"title"=>"help me this shit doesn't work", "body"=>"rknmgnergjnerkjgnekrger"}, "commit"=>"Create Question"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "questions" ("title", "body", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "help me this shit doesn't work"], ["body", "rknmgnergjnerkjgnekrger"], ["user_id", 1], ["created_at", "2016-03-23 00:50:47.322081"], ["updated_at", "2016-03-23 00:50:47.322081"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+Redirected to http://localhost:3000/questions/4
+Completed 302 Found in 7ms (ActiveRecord: 1.8ms)
+
+
+Started GET "/questions/4" for ::1 at 2016-03-22 20:50:47 -0400
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mQuestion Load (0.3ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mAnswer Load (0.4ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1  ORDER BY "answers"."created_at" ASC  [["question_id", 4]]
+  Rendered questions/show.html.erb within layouts/application (7.4ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 47ms (Views: 22.1ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/questions/4/edit" for ::1 at 2016-03-22 20:50:48 -0400
+Processing by QuestionsController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mQuestion Load (0.4ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 4]]
+  Rendered questions/edit.html.erb within layouts/application (3.7ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 24ms (Views: 21.9ms | ActiveRecord: 0.8ms)
+
+
+Started PATCH "/questions/4" for ::1 at 2016-03-22 20:51:03 -0400
+Processing by QuestionsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1Kq1ULYiB459YrKTSoFGcdrA/AfugbTV5gmWyZf4MjwgPX5kS3X0bxVLxI/sz7uIB7dcn1eLkBjn4y70KLXt1w==", "question"=>{"title"=>"help me this shit doesn't work", "body"=>"rknmgnergjnerkjgnekrger", "user_id"=>"1"}, "commit"=>"Update Question", "id"=>"4"}
+  [1m[35mQuestion Load (0.3ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+Redirected to http://localhost:3000/questions/4
+Completed 302 Found in 5ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/questions/4" for ::1 at 2016-03-22 20:51:03 -0400
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mQuestion Load (0.5ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mAnswer Load (0.3ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1  ORDER BY "answers"."created_at" ASC  [["question_id", 4]]
+  Rendered questions/show.html.erb within layouts/application (4.6ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 25ms (Views: 22.1ms | ActiveRecord: 1.1ms)
+
+
+Started PATCH "/questions/4" for ::1 at 2016-03-22 20:51:12 -0400
+Processing by QuestionsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1Kq1ULYiB459YrKTSoFGcdrA/AfugbTV5gmWyZf4MjwgPX5kS3X0bxVLxI/sz7uIB7dcn1eLkBjn4y70KLXt1w==", "question"=>{"title"=>"", "body"=>"", "user_id"=>"1"}, "commit"=>"Update Question", "id"=>"4"}
+  [1m[35mQuestion Load (0.4ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  Rendered questions/edit.html.erb within layouts/application (6.4ms)
+  [1m[36mUser Load (1.9ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 36ms (Views: 24.5ms | ActiveRecord: 2.6ms)
+
+
+Started PATCH "/questions/4" for ::1 at 2016-03-22 20:54:47 -0400
+Processing by QuestionsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1Kq1ULYiB459YrKTSoFGcdrA/AfugbTV5gmWyZf4MjwgPX5kS3X0bxVLxI/sz7uIB7dcn1eLkBjn4y70KLXt1w==", "question"=>{"title"=>"", "body"=>"", "user_id"=>"1"}, "commit"=>"Update Question", "id"=>"4"}
+  [1m[35mQuestion Load (0.5ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  Rendered questions/edit.html.erb within layouts/application (3.9ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 18ms (Views: 12.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/questions" for ::1 at 2016-03-22 20:55:41 -0400
+Processing by QuestionsController#index as HTML
+  [1m[35mQuestion Load (0.4ms)[0m  SELECT "questions".* FROM "questions"  ORDER BY "questions"."created_at" DESC
+  Rendered questions/index.html.erb within layouts/application (1.5ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 11ms (Views: 9.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/questions/4" for ::1 at 2016-03-22 20:55:42 -0400
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mQuestion Load (0.2ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mAnswer Load (0.3ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1  ORDER BY "answers"."created_at" ASC[0m  [["question_id", 4]]
+  Rendered questions/show.html.erb within layouts/application (2.6ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+Completed 200 OK in 13ms (Views: 11.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/questions/4/edit" for ::1 at 2016-03-22 20:55:44 -0400
+Processing by QuestionsController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mQuestion Load (0.3ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  Rendered questions/edit.html.erb within layouts/application (2.2ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+Completed 200 OK in 13ms (Views: 11.6ms | ActiveRecord: 0.5ms)
+
+
+Started PATCH "/questions/4" for ::1 at 2016-03-22 20:55:48 -0400
+Processing by QuestionsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"EbXP7a61C7LPsBZAAL5FFi3nCpTkJAB3aPpisZbLu7rlIgTZU+L4U6eZYFym8Ljv8JCqDF0uJLppENqMKYZkUQ==", "question"=>{"title"=>"help me this shit doesn't work", "body"=>"erkjgnekrger"}, "commit"=>"Update Question", "id"=>"4"}
+  [1m[36mQuestion Load (0.2ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  Rendered questions/edit.html.erb within layouts/application (1.6ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+Completed 200 OK in 16ms (Views: 11.8ms | ActiveRecord: 0.7ms)
+
+
+Started PATCH "/questions/4" for ::1 at 2016-03-22 20:55:51 -0400
+Processing by QuestionsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"TCBAjqViuVKpLhk6/5f3HQeZflezjgWU42wQWxJ7Vea4t4u6WDVKs8EHbyZZ2Qrk2u7ezwqEIVnihqhmrTaKDQ==", "question"=>{"title"=>"help me this shit doesn't work", "body"=>"erkjgnekrgert3t4t3"}, "commit"=>"Update Question", "id"=>"4"}
+  [1m[36mQuestion Load (0.4ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "questions" SET "body" = $1, "updated_at" = $2 WHERE "questions"."id" = $3[0m  [["body", "erkjgnekrgert3t4t3"], ["updated_at", "2016-03-23 00:55:51.056905"], ["id", 4]]
+  [1m[35m (0.3ms)[0m  COMMIT
+Redirected to http://localhost:3000/questions/4
+Completed 302 Found in 5ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/questions/4" for ::1 at 2016-03-22 20:55:51 -0400
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mQuestion Load (0.2ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mAnswer Load (0.3ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1  ORDER BY "answers"."created_at" ASC  [["question_id", 4]]
+  Rendered questions/show.html.erb within layouts/application (2.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 12ms (Views: 10.7ms | ActiveRecord: 0.7ms)
+
+
+Started DELETE "/questions/4" for ::1 at 2016-03-22 20:55:56 -0400
+Processing by QuestionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"LscRgiqraGDKvTRIPeIZzn2dcRYLrRDYHEmai81f+e7aUNq21/ybgaKUQlSbrOQ3oOrRjrKnNBUdoyK2chImBQ==", "id"=>"4"}
+  [1m[35mQuestion Load (0.2ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "questions" WHERE "questions"."id" = $1  [["id", 4]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 3ms (ActiveRecord: 0.9ms)
+
+
+Started GET "/" for ::1 at 2016-03-22 20:55:56 -0400
+Processing by QuestionsController#index as HTML
+  [1m[35mQuestion Load (0.3ms)[0m  SELECT "questions".* FROM "questions"  ORDER BY "questions"."created_at" DESC
+  Rendered questions/index.html.erb within layouts/application (0.8ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 10ms (Views: 9.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/questions/new" for ::1 at 2016-03-22 20:56:04 -0400
+Processing by QuestionsController#new as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered questions/new.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 12ms (Views: 10.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2016-03-23 10:34:35 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (2.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by QuestionsController#index as HTML
+  [1m[35mQuestion Load (2.5ms)[0m  SELECT "questions".* FROM "questions"  ORDER BY "questions"."created_at" DESC
+  Rendered questions/index.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 224ms (Views: 203.6ms | ActiveRecord: 4.7ms)
+
+
+Started GET "/" for ::1 at 2016-03-23 10:34:35 -0400
+Processing by QuestionsController#index as HTML
+  [1m[36mQuestion Load (0.3ms)[0m  [1mSELECT "questions".* FROM "questions"  ORDER BY "questions"."created_at" DESC[0m
+  Rendered questions/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 10ms (Views: 9.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/questions/new" for ::1 at 2016-03-23 10:34:37 -0400
+Processing by QuestionsController#new as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 11ms (ActiveRecord: 6.2ms)
+
+
+Started GET "/" for ::1 at 2016-03-23 10:34:37 -0400
+Processing by QuestionsController#index as HTML
+  [1m[35mQuestion Load (0.3ms)[0m  SELECT "questions".* FROM "questions"  ORDER BY "questions"."created_at" DESC
+  Rendered questions/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 11ms (Views: 10.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/auth/facebook" for ::1 at 2016-03-23 10:34:38 -0400
+(facebook) Request phase initiated.
+
+
+Started GET "/auth/facebook/callback?code=AQC_NDxpNg99XwwTMPBN6j0wpPhfd-p3dV5T53zP4J17GRI90aJhicGT182dVA-yqLHUk7OA-irPJMSEb9cMrF08PXSjwGZJh15Kr6CM6LdEEbjmk4QiUHgvUToJ9S-K8QDqEn_1wyDU_zRCApFmJ-RXNyWoUoVsMsN9kFFnr4Dr-gP0eVk6cgQ2pJPnfoXb63RY55iAvemBWfUw-L7zBl0htBwAKr2Kxe2ATcGAGI_k3BPYjhNH-fcIy73aFBd3rfSMK_LT2mIS1jV5ovbFDhijyzk1Zr8V5WHQWh9HcNL9LJXT3qgCeSAYfg1iEbWdgj981vTfuY6lCfCD2wva1ZEW" for ::1 at 2016-03-23 10:34:39 -0400
+(facebook) Callback phase initiated.
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"AQC_NDxpNg99XwwTMPBN6j0wpPhfd-p3dV5T53zP4J17GRI90aJhicGT182dVA-yqLHUk7OA-irPJMSEb9cMrF08PXSjwGZJh15Kr6CM6LdEEbjmk4QiUHgvUToJ9S-K8QDqEn_1wyDU_zRCApFmJ-RXNyWoUoVsMsN9kFFnr4Dr-gP0eVk6cgQ2pJPnfoXb63RY55iAvemBWfUw-L7zBl0htBwAKr2Kxe2ATcGAGI_k3BPYjhNH-fcIy73aFBd3rfSMK_LT2mIS1jV5ovbFDhijyzk1Zr8V5WHQWh9HcNL9LJXT3qgCeSAYfg1iEbWdgj981vTfuY6lCfCD2wva1ZEW", "provider"=>"facebook"}
+  [1m[36mUser Load (2.1ms)[0m  [1mSELECT  "users".* FROM "users"  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35m (0.6ms)[0m  BEGIN
+  [1m[36mSQL (2.0ms)[0m  [1mUPDATE "users" SET "oauth_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["oauth_token", "CAAQ6PJVQL8UBAE6TmL66YbwiWTfZCiDs96WDuYTYLa2tll84oO4iQhamUkR3IBsXh1xLNJ0FP07qHEd9Dl95Wu2ZAeMLJRsOkYhW8jSjwLjaRZCvCJyvQ9oTQeHRKoNVga57VmZBzr6N8Ti77aGXAt8SvZBUVwt11D0rZAwwCI84vGtWZBRHPpYBC54y37hMk4ZD"], ["updated_at", "2016-03-23 14:34:40.618424"], ["id", 1]]
+  [1m[35m (0.7ms)[0m  COMMIT
+Redirected to http://localhost:3000/
+Completed 302 Found in 36ms (ActiveRecord: 7.9ms)
+
+
+Started GET "/" for ::1 at 2016-03-23 10:34:40 -0400
+Processing by QuestionsController#index as HTML
+  [1m[36mQuestion Load (0.3ms)[0m  [1mSELECT "questions".* FROM "questions"  ORDER BY "questions"."created_at" DESC[0m
+  Rendered questions/index.html.erb within layouts/application (1.0ms)
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+Completed 200 OK in 17ms (Views: 16.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/signout" for ::1 at 2016-03-23 10:34:42 -0400
+Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-03-23 10:34:42 -0400
+Processing by QuestionsController#index as HTML
+  [1m[36mQuestion Load (0.4ms)[0m  [1mSELECT "questions".* FROM "questions"  ORDER BY "questions"."created_at" DESC[0m
+  Rendered questions/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 18ms (Views: 17.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/questions/new" for ::1 at 2016-03-23 10:34:44 -0400
+Processing by QuestionsController#new as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-03-23 10:34:44 -0400
+Processing by QuestionsController#index as HTML
+  [1m[35mQuestion Load (0.3ms)[0m  SELECT "questions".* FROM "questions"  ORDER BY "questions"."created_at" DESC
+  Rendered questions/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 15ms (Views: 14.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/auth/facebook" for ::1 at 2016-03-23 10:34:46 -0400
+(facebook) Request phase initiated.
+
+
+Started GET "/auth/facebook/callback?code=AQCWRvkHN4Ahnp9OywXrbuYMFMCXKvjuP3nP3ljK0RQBX8EjRkrKja2tp0cpRNUYhn-F-sm2IrteQX43vQPb6piRM3QVJCjEfsEbLHRfk8-EtSOXYeE_J-UmeSAnXLM3H4XHL4tjzFnkoMNsgys7nPU6svfZXDx7Gh_syZKcLKkFNqLWaLfZuAp3UG4r2Taaxy8cdI5xl0hfdQFClEUPEfNGd-dSecnJKJixWvl3_xBl6Gq1SScxEz0ha5rtFY85zwIKC7tWjfgQ8dQwYo6-Ef40girh5YaNGGgjN9bfun3O3qfKh0FtsRRdnBXrNSiRltYutoG8hmnX4tWStdr5YN3_" for ::1 at 2016-03-23 10:34:46 -0400
+(facebook) Callback phase initiated.
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"AQCWRvkHN4Ahnp9OywXrbuYMFMCXKvjuP3nP3ljK0RQBX8EjRkrKja2tp0cpRNUYhn-F-sm2IrteQX43vQPb6piRM3QVJCjEfsEbLHRfk8-EtSOXYeE_J-UmeSAnXLM3H4XHL4tjzFnkoMNsgys7nPU6svfZXDx7Gh_syZKcLKkFNqLWaLfZuAp3UG4r2Taaxy8cdI5xl0hfdQFClEUPEfNGd-dSecnJKJixWvl3_xBl6Gq1SScxEz0ha5rtFY85zwIKC7tWjfgQ8dQwYo6-Ef40girh5YaNGGgjN9bfun3O3qfKh0FtsRRdnBXrNSiRltYutoG8hmnX4tWStdr5YN3_", "provider"=>"facebook"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "users" SET "oauth_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["oauth_token", "CAAQ6PJVQL8UBAFOeH8sN1JyRp105FSw2orVKNZAiuZAXrFZAnZAHK3kRp9MowEekv91rGx3ScpmycafLRM4fOPqpxXCZC8RUAuW8e3v2ILxzFyZATCbqotrJNk3kudlFfyagi6sNQxDtZBLahZAsObgrOcjZAQ4TwqSZCXdK4k7SFs2QZAoEQJRucq3zaw8TwmOaJUZD"], ["updated_at", "2016-03-23 14:34:46.867020"], ["id", 1]]
+  [1m[35m (1.2ms)[0m  COMMIT
+Redirected to http://localhost:3000/
+Completed 302 Found in 6ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/" for ::1 at 2016-03-23 10:34:46 -0400
+Processing by QuestionsController#index as HTML
+  [1m[36mQuestion Load (0.3ms)[0m  [1mSELECT "questions".* FROM "questions"  ORDER BY "questions"."created_at" DESC[0m
+  Rendered questions/index.html.erb within layouts/application (0.8ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+Completed 200 OK in 15ms (Views: 14.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/questions/new" for ::1 at 2016-03-23 10:34:47 -0400
+Processing by QuestionsController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered questions/new.html.erb within layouts/application (21.1ms)
+Completed 200 OK in 33ms (Views: 32.1ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/questions" for ::1 at 2016-03-23 10:34:56 -0400
+Processing by QuestionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tJiJIfbaeWkK3+GMbfzMyDNMOdG24cnT5LuOXosoNxji/7WrrPQcgr/IAPtYlzcUUwwoij79x0iOAqs80rqWXw==", "question"=>{"title"=>"Help I need help", "body"=>"I am having trouble getting the delete button to work"}, "commit"=>"Create Question"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.6ms)[0m  INSERT INTO "questions" ("title", "body", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["title", "Help I need help"], ["body", "I am having trouble getting the delete button to work"], ["user_id", 1], ["created_at", "2016-03-23 14:34:56.847561"], ["updated_at", "2016-03-23 14:34:56.847561"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/questions/5
+Completed 302 Found in 7ms (ActiveRecord: 2.4ms)
+
+
+Started GET "/questions/5" for ::1 at 2016-03-23 10:34:56 -0400
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mQuestion Load (0.3ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mAnswer Load (0.6ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1  ORDER BY "answers"."created_at" ASC[0m  [["question_id", 5]]
+  Rendered questions/show.html.erb within layouts/application (4.8ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+Completed 200 OK in 33ms (Views: 13.1ms | ActiveRecord: 2.7ms)
+
+
+Started DELETE "/questions/5" for ::1 at 2016-03-23 10:35:01 -0400
+Processing by QuestionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"ZR8XPBQW/HQ/O9BPNZGoto+mih7oNL9sz9LGKupRzDozeCu2TjiZn4osMTgA+lNq7+abRWAosfela+NIs8NtfQ==", "id"=>"5"}
+  [1m[36mQuestion Load (0.3ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "questions" WHERE "questions"."id" = $1[0m  [["id", 5]]
+  [1m[35m (1.2ms)[0m  COMMIT
+Redirected to http://localhost:3000/
+Completed 302 Found in 4ms (ActiveRecord: 1.9ms)
+
+
+Started GET "/" for ::1 at 2016-03-23 10:35:01 -0400
+Processing by QuestionsController#index as HTML
+  [1m[36mQuestion Load (0.3ms)[0m  [1mSELECT "questions".* FROM "questions"  ORDER BY "questions"."created_at" DESC[0m
+  Rendered questions/index.html.erb within layouts/application (0.7ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+Completed 200 OK in 10ms (Views: 8.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/questions/5" for ::1 at 2016-03-23 10:35:02 -0400
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mQuestion Load (0.8ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 5]]
+Completed 404 Not Found in 3ms (ActiveRecord: 0.8ms)
+
+ActiveRecord::RecordNotFound (Couldn't find Question with 'id'=5):
+  app/controllers/questions_controller.rb:7:in `show'
+
+
+  Rendered /Users/Tommy/.rubies/ruby-2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.5ms)
+  Rendered /Users/Tommy/.rubies/ruby-2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.7ms)
+  Rendered /Users/Tommy/.rubies/ruby-2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/Tommy/.rubies/ruby-2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (103.2ms)
+  Rendered /Users/Tommy/.rubies/ruby-2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/Tommy/.rubies/ruby-2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/Tommy/.rubies/ruby-2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered /Users/Tommy/.rubies/ruby-2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Tommy/.rubies/ruby-2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (82.5ms)
+  Rendered /Users/Tommy/.rubies/ruby-2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/Tommy/.rubies/ruby-2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/Tommy/.rubies/ruby-2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (180.0ms)
+
+
+Started GET "/" for ::1 at 2016-03-23 12:31:33 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by QuestionsController#index as HTML
+  [1m[35mQuestion Load (0.9ms)[0m  SELECT "questions".* FROM "questions"  ORDER BY "questions"."created_at" DESC
+  Rendered questions/index.html.erb within layouts/application (4.6ms)
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 1192ms (Views: 1173.6ms | ActiveRecord: 6.1ms)
+
+
+Started GET "/" for ::1 at 2016-03-23 12:31:34 -0400
+Processing by QuestionsController#index as HTML
+  [1m[35mQuestion Load (0.3ms)[0m  SELECT "questions".* FROM "questions"  ORDER BY "questions"."created_at" DESC
+  Rendered questions/index.html.erb within layouts/application (0.8ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 12ms (Views: 10.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/foundation.min.self-8a245bb637bd4dcf10a76f112ebcdb735c60bd10feaba679a07a8692ed922db9.css?body=1" for ::1 at 2016-03-23 12:31:34 -0400
+
+
+Started GET "/" for ::1 at 2016-03-23 12:32:26 -0400
+Processing by QuestionsController#index as HTML
+  [1m[35mQuestion Load (0.3ms)[0m  SELECT "questions".* FROM "questions"  ORDER BY "questions"."created_at" DESC
+  Rendered questions/index.html.erb within layouts/application (1.0ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 13ms (Views: 12.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/foundation.min.self-8a245bb637bd4dcf10a76f112ebcdb735c60bd10feaba679a07a8692ed922db9.css?body=1" for ::1 at 2016-03-23 12:32:26 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-03-23 12:32:26 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-03-23 12:32:26 -0400
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2016-03-23 12:32:26 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-03-23 12:32:26 -0400
+
+
+Started GET "/" for ::1 at 2016-03-23 12:33:52 -0400
+Processing by QuestionsController#index as HTML
+  [1m[35mQuestion Load (0.3ms)[0m  SELECT "questions".* FROM "questions"  ORDER BY "questions"."created_at" DESC
+  Rendered questions/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 20ms (Views: 19.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/foundation.min.self-8a245bb637bd4dcf10a76f112ebcdb735c60bd10feaba679a07a8692ed922db9.css?body=1" for ::1 at 2016-03-23 12:33:52 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-03-23 12:33:52 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-03-23 12:33:52 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-03-23 12:33:52 -0400
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2016-03-23 12:33:52 -0400
+
+
+Started GET "/" for ::1 at 2016-03-23 12:37:13 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by QuestionsController#index as HTML
+  [1m[35mQuestion Load (1.1ms)[0m  SELECT "questions".* FROM "questions"  ORDER BY "questions"."created_at" DESC
+  Rendered questions/index.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 197ms (Views: 188.5ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/assets/foundation.min.self-8a245bb637bd4dcf10a76f112ebcdb735c60bd10feaba679a07a8692ed922db9.css?body=1" for ::1 at 2016-03-23 12:37:14 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-03-23 12:37:14 -0400
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2016-03-23 12:37:14 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-03-23 12:37:14 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-03-23 12:37:14 -0400
+
+
+Started GET "/questions/new" for ::1 at 2016-03-23 12:37:18 -0400
+Processing by QuestionsController#new as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 8ms (ActiveRecord: 2.8ms)
+
+
+Started GET "/" for ::1 at 2016-03-23 12:37:18 -0400
+Processing by QuestionsController#index as HTML
+  [1m[36mQuestion Load (0.5ms)[0m  [1mSELECT "questions".* FROM "questions"  ORDER BY "questions"."created_at" DESC[0m
+  Rendered questions/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 13ms (Views: 12.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2016-03-23 12:45:26 -0400
+Processing by QuestionsController#index as HTML
+  [1m[35mQuestion Load (0.3ms)[0m  SELECT "questions".* FROM "questions"  ORDER BY "questions"."created_at" DESC
+  Rendered questions/index.html.erb within layouts/application (2.1ms)
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 63ms (Views: 47.9ms | ActiveRecord: 5.1ms)
+
+
+Started GET "/questions/new" for ::1 at 2016-03-23 12:45:30 -0400
+Processing by QuestionsController#new as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered questions/new.html.erb within layouts/application (26.2ms)
+Completed 200 OK in 48ms (Views: 41.4ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/questions" for ::1 at 2016-03-23 12:45:51 -0400
+Processing by QuestionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IB2JZbzuDFY941gqUOhbnl4Qt9IIXJ+80wjVITGwLoN2erXv5sBpvYj0uV1lg6BCPlCmiYBAkSe5sfBDaCKPxA==", "question"=>{"title"=>"what is this?", "body"=>"kngjknsgkdnkfjgnkjdfngdf"}, "commit"=>"Create Question"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (1.1ms)[0m  [1mINSERT INTO "questions" ("title", "body", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "what is this?"], ["body", "kngjknsgkdnkfjgnkjdfngdf"], ["user_id", 1], ["created_at", "2016-03-23 16:45:51.409365"], ["updated_at", "2016-03-23 16:45:51.409365"]]
+  [1m[35m (1.0ms)[0m  COMMIT
+Redirected to http://localhost:3000/questions/6
+Completed 302 Found in 10ms (ActiveRecord: 2.8ms)
+
+
+Started GET "/questions/6" for ::1 at 2016-03-23 12:45:51 -0400
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mQuestion Load (0.5ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 6]]
+  [1m[35mAnswer Load (0.4ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1  ORDER BY "answers"."created_at" ASC  [["question_id", 6]]
+  Rendered questions/show.html.erb within layouts/application (6.0ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 47ms (Views: 17.2ms | ActiveRecord: 2.7ms)
+
+
+Started POST "/questions/6/answers" for ::1 at 2016-03-23 12:45:57 -0400
+Processing by AnswersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"xHLKDMhhPijya74yg0q2RMc/fVfxJjDW2z2xlnDvUgCSFfaGkk9bw0d8X0W2IU2Yp39sDHk6Pk2xhJT0KX3zRw==", "answer"=>{"body"=>"kmgkjnkgnbfgb"}, "commit"=>"Create Answer", "question_id"=>"6"}
+  [1m[35mQuestion Load (0.3ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 6]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.4ms)[0m  ROLLBACK
+  [1m[36mAnswer Load (0.3ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1  ORDER BY "answers"."created_at" ASC[0m  [["question_id", 6]]
+  Rendered questions/show.html.erb within layouts/application (2.8ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+Completed 200 OK in 24ms (Views: 15.6ms | ActiveRecord: 1.5ms)
+
+
+Started POST "/questions/6/answers" for ::1 at 2016-03-23 12:46:32 -0400
+Processing by AnswersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fT3xFH7JoFdy0LIBI3H68u82vSbT8em7iiECKrf42PYrWs2eJOfFvMfHU3YWGgEuj3asfVvt5yDgmCdI7mp5sQ==", "answer"=>{"body"=>"kmgkjnkgnbfgb"}, "commit"=>"Create Answer", "question_id"=>"6"}
+  [1m[36mQuestion Load (0.3ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 6]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35mAnswer Load (0.3ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1  ORDER BY "answers"."created_at" ASC  [["question_id", 6]]
+  Rendered questions/show.html.erb within layouts/application (3.3ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 18ms (Views: 13.7ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/questions/6/answers" for ::1 at 2016-03-23 12:46:33 -0400
+Processing by AnswersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cA2btUwVLu0lwR4uGa8RjmKm71ywvEvjIOHR/HWhqTcmaqc/FjtLBpDW/1ksxOpSAub+BzigRXhKWPSeLDMIcA==", "answer"=>{"body"=>"kmgkjnkgnbfgb"}, "commit"=>"Create Answer", "question_id"=>"6"}
+  [1m[35mQuestion Load (0.3ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 6]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.4ms)[0m  ROLLBACK
+  [1m[36mAnswer Load (0.3ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1  ORDER BY "answers"."created_at" ASC[0m  [["question_id", 6]]
+  Rendered questions/show.html.erb within layouts/application (2.7ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+Completed 200 OK in 18ms (Views: 12.9ms | ActiveRecord: 1.4ms)
+
+
+Started POST "/questions/6/answers" for ::1 at 2016-03-23 12:46:33 -0400
+Processing by AnswersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"V2Yt0CqRiuNi/3fzPbROpz6KGHqr3FyJ0vmmAemFT24BARFacL/vCNfoloQI37V7XsoJISPAUhK4QINjsBfuKQ==", "answer"=>{"body"=>"kmgkjnkgnbfgb"}, "commit"=>"Create Answer", "question_id"=>"6"}
+  [1m[36mQuestion Load (0.3ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 6]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35mAnswer Load (0.5ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1  ORDER BY "answers"."created_at" ASC  [["question_id", 6]]
+  Rendered questions/show.html.erb within layouts/application (4.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 19ms (Views: 15.8ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/questions/6/answers" for ::1 at 2016-03-23 12:46:33 -0400
+Processing by AnswersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BDYC1UwdFshWNLoh6EjJ7XctvAdPpLZSAuk5XfM/xKZSUT5fFjNzI+MjW1bdIzIxF22tXMe4uMloUBw/qq1l4Q==", "answer"=>{"body"=>"kmgkjnkgnbfgb"}, "commit"=>"Create Answer", "question_id"=>"6"}
+  [1m[35mQuestion Load (0.4ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 6]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36mAnswer Load (0.3ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1  ORDER BY "answers"."created_at" ASC[0m  [["question_id", 6]]
+  Rendered questions/show.html.erb within layouts/application (2.7ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+Completed 200 OK in 18ms (Views: 13.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for ::1 at 2016-03-23 12:54:57 -0400
+Processing by QuestionsController#index as HTML
+  [1m[36mQuestion Load (1.9ms)[0m  [1mSELECT "questions".* FROM "questions"  ORDER BY "questions"."created_at" DESC[0m
+  Rendered questions/index.html.erb within layouts/application (14.3ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+Completed 200 OK in 60ms (Views: 44.8ms | ActiveRecord: 10.0ms)
+
+
+Started GET "/signout" for ::1 at 2016-03-23 12:54:59 -0400
+Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-03-23 12:54:59 -0400
+Processing by QuestionsController#index as HTML
+  [1m[36mQuestion Load (0.8ms)[0m  [1mSELECT "questions".* FROM "questions"  ORDER BY "questions"."created_at" DESC[0m
+  Rendered questions/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 12ms (Views: 10.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/questions/6" for ::1 at 2016-03-23 12:55:00 -0400
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[35mQuestion Load (0.2ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 6]]
+  [1m[36mAnswer Load (0.3ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1  ORDER BY "answers"."created_at" ASC[0m  [["question_id", 6]]
+  Rendered questions/show.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 25ms (Views: 15.4ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/questions/6/edit" for ::1 at 2016-03-23 12:55:02 -0400
+Processing by QuestionsController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[35mQuestion Load (0.2ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 6]]
+  [1m[36mAnswer Load (0.2ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1  ORDER BY "answers"."created_at" ASC[0m  [["question_id", 6]]
+  Rendered questions/show.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 13ms (Views: 11.0ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/questions/6" for ::1 at 2016-03-23 12:55:06 -0400
+Processing by QuestionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"ZK6wud40TM+ZWfyvwDRXHYGJqirr/G9l7xR0ppT+qmUyyYwzhBopJCxOHdj1X6zB4cm7cWPgYf6FrVHEzWwLIg==", "id"=>"6"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `answers' for nil:NilClass):
+  app/controllers/questions_controller.rb:62:in `destroy'
+
+
+  Rendered /Users/Tommy/.rubies/ruby-2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.6ms)
+  Rendered /Users/Tommy/.rubies/ruby-2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /Users/Tommy/.rubies/ruby-2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/Tommy/.rubies/ruby-2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (56.9ms)
+  Rendered /Users/Tommy/.rubies/ruby-2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/Tommy/.rubies/ruby-2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/Tommy/.rubies/ruby-2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Tommy/.rubies/ruby-2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/Tommy/.rubies/ruby-2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (49.0ms)
+  Rendered /Users/Tommy/.rubies/ruby-2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/Tommy/.rubies/ruby-2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/Tommy/.rubies/ruby-2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (113.3ms)
+
+
+Started DELETE "/questions/6" for ::1 at 2016-03-23 12:56:12 -0400
+Processing by QuestionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"ZK6wud40TM+ZWfyvwDRXHYGJqirr/G9l7xR0ppT+qmUyyYwzhBopJCxOHdj1X6zB4cm7cWPgYf6FrVHEzWwLIg==", "id"=>"6"}
+  [1m[35mQuestion Load (0.4ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 6]]
+  [1m[36mAnswer Load (0.2ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1  ORDER BY "answers"."created_at" ASC[0m  [["question_id", 6]]
+  Rendered questions/show.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 36ms (Views: 15.8ms | ActiveRecord: 4.9ms)
+
+
+Started GET "/assets/foundation.min.self-8a245bb637bd4dcf10a76f112ebcdb735c60bd10feaba679a07a8692ed922db9.css?body=1" for ::1 at 2016-03-23 12:56:12 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-03-23 12:56:12 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-03-23 12:56:12 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-03-23 12:56:12 -0400
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2016-03-23 12:56:12 -0400
+
+
+Started DELETE "/questions/6" for ::1 at 2016-03-23 12:56:16 -0400
+Processing by QuestionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"QSLToEFwglBQAS5P+phcLJP/gU+5VillvBohB6Nwq2UXRe8qG17nu+UWzzjP86fw87+QFDFKJ/7WowRl+uIKIg==", "id"=>"6"}
+  [1m[35mQuestion Load (0.2ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 6]]
+  [1m[36mAnswer Load (0.2ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1  ORDER BY "answers"."created_at" ASC[0m  [["question_id", 6]]
+  Rendered questions/show.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 15ms (Views: 12.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/auth/facebook" for ::1 at 2016-03-23 12:56:19 -0400
+(facebook) Request phase initiated.
+
+
+Started GET "/auth/facebook/callback?code=AQA9TdiQWXmRozfJurveBY5m3V6TdYvopGlu5ZR96e0KmPP6gJazmU28nh8Fi7RFbItroCPJ2r9tkmotXsRycRLW2cjXuJZQOKzUgJ2yOxLxg46scy3_FdXMcBVfB-fqpqiKDEx9m1tJ3v2sIy3fO559oVnz8ruJD2kZXa8jvHMMxqhlmeebgbdIPhxwnpy-1ZVPTVnB5x9hMlXfaqK9u3yvNYDvcO_yHWd9dJEDm5u6caLI7UaqSTQr1rS80DFfLdS0tWLBcJyF4TxSC44PZLJ5g1SZGJfCTd9BPn1APbgLpy3RXREPtm2CRNiOgjEozzbCpzQ5eEuma_0FveuZFmSU" for ::1 at 2016-03-23 12:56:19 -0400
+(facebook) Callback phase initiated.
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"AQA9TdiQWXmRozfJurveBY5m3V6TdYvopGlu5ZR96e0KmPP6gJazmU28nh8Fi7RFbItroCPJ2r9tkmotXsRycRLW2cjXuJZQOKzUgJ2yOxLxg46scy3_FdXMcBVfB-fqpqiKDEx9m1tJ3v2sIy3fO559oVnz8ruJD2kZXa8jvHMMxqhlmeebgbdIPhxwnpy-1ZVPTVnB5x9hMlXfaqK9u3yvNYDvcO_yHWd9dJEDm5u6caLI7UaqSTQr1rS80DFfLdS0tWLBcJyF4TxSC44PZLJ5g1SZGJfCTd9BPn1APbgLpy3RXREPtm2CRNiOgjEozzbCpzQ5eEuma_0FveuZFmSU", "provider"=>"facebook"}
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users"  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "users" SET "oauth_token" = $1, "oauth_expires_at" = $2, "updated_at" = $3 WHERE "users"."id" = $4  [["oauth_token", "CAAQ6PJVQL8UBAGYKAP47sAoIdjUKlgbVh1COq56ltFZAZCJeYIX2bDGsVrGYFWdZBT3XooXndraiTAlmwVNJCOlQ8blICiugsZCUKu2M2XKcCPfDsVuPSmXv42btKJ52FpeaFIMRl6JxiTihbs5qydRVedT3tgA5NziGuIWQk9XCE1ysCxdQOwHu679NtqAZD"], ["oauth_expires_at", "2016-05-21 18:42:19.000000"], ["updated_at", "2016-03-23 16:56:20.205528"], ["id", 1]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 13ms (ActiveRecord: 2.9ms)
+
+
+Started GET "/" for ::1 at 2016-03-23 12:56:20 -0400
+Processing by QuestionsController#index as HTML
+  [1m[35mQuestion Load (0.3ms)[0m  SELECT "questions".* FROM "questions"  ORDER BY "questions"."created_at" DESC
+  Rendered questions/index.html.erb within layouts/application (1.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 11ms (Views: 10.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/questions/6" for ::1 at 2016-03-23 12:56:21 -0400
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[35mQuestion Load (0.2ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 6]]
+  [1m[36mAnswer Load (0.2ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1  ORDER BY "answers"."created_at" ASC[0m  [["question_id", 6]]
+  Rendered questions/show.html.erb within layouts/application (2.2ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+Completed 200 OK in 15ms (Views: 12.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/questions/6/edit" for ::1 at 2016-03-23 12:56:22 -0400
+Processing by QuestionsController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mQuestion Load (0.2ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 6]]
+  Rendered questions/edit.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 22ms (Views: 20.5ms | ActiveRecord: 0.4ms)
+
+
+Started PATCH "/questions/6" for ::1 at 2016-03-23 12:56:24 -0400
+Processing by QuestionsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"FhtUnvYxjL+GjW5ogi1HXxwPfMZqM2Gs9O2sgTisH3pAfGgUrB/pVDOajx+3RryDfE9tneIvbzeeVInjYT6+PQ==", "question"=>{"title"=>"what is this?", "body"=>"kngjknsgkdnkfjgnkjdfngdf"}, "commit"=>"Update Question", "id"=>"6"}
+  [1m[36mQuestion Load (0.2ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 6]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/questions/6
+Completed 302 Found in 4ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/questions/6" for ::1 at 2016-03-23 12:56:24 -0400
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[35mQuestion Load (0.4ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 6]]
+  [1m[36mAnswer Load (0.3ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1  ORDER BY "answers"."created_at" ASC[0m  [["question_id", 6]]
+  Rendered questions/show.html.erb within layouts/application (3.2ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+Completed 200 OK in 18ms (Views: 16.1ms | ActiveRecord: 0.9ms)
+
+
+Started DELETE "/questions/6" for ::1 at 2016-03-23 12:56:26 -0400
+Processing by QuestionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"iFvTMxZJ0VHBvL87hni+Ka/Z73Ej8xwT+AxbEVZki6nePO+5TGe0unSrXkyzE0X1z5n+KqvvEoiStX5zD/Yq7g==", "id"=>"6"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mQuestion Load (0.2ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 6]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "questions" WHERE "questions"."id" = $1  [["id", 6]]
+  [1m[36m (1.2ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 5ms (ActiveRecord: 1.9ms)
+
+
+Started GET "/" for ::1 at 2016-03-23 12:56:26 -0400
+Processing by QuestionsController#index as HTML
+  [1m[35mQuestion Load (0.5ms)[0m  SELECT "questions".* FROM "questions"  ORDER BY "questions"."created_at" DESC
+  Rendered questions/index.html.erb within layouts/application (1.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 12ms (Views: 10.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for ::1 at 2016-03-23 12:58:36 -0400
+Processing by QuestionsController#index as HTML
+  [1m[35mQuestion Load (0.3ms)[0m  SELECT "questions".* FROM "questions"  ORDER BY "questions"."created_at" DESC
+  Rendered questions/index.html.erb within layouts/application (2.7ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 27ms (Views: 21.0ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-03-23 12:58:36 -0400
+
+
+Started GET "/assets/foundation.min.self-8a245bb637bd4dcf10a76f112ebcdb735c60bd10feaba679a07a8692ed922db9.css?body=1" for ::1 at 2016-03-23 12:58:36 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-03-23 12:58:36 -0400
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2016-03-23 12:58:36 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-03-23 12:58:36 -0400
+
+
+Started GET "/questions/new" for ::1 at 2016-03-23 12:59:23 -0400
+Processing by QuestionsController#new as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered questions/new.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 32ms (Views: 13.6ms | ActiveRecord: 4.5ms)
+
+
+Started POST "/questions" for ::1 at 2016-03-23 12:59:51 -0400
+Processing by QuestionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/fuKoKGu664pSK9LOIGlxETYQ54xsWrtluTuyOtIHwernLYq+4CORZxfTjwN6l4YJJhSxbmtZHb8Xcuqstq+QA==", "question"=>{"title"=>"l;mwwlkfgeflkg", "body"=>"klflgkndflkgnldfngdlgnd"}, "commit"=>"Create Question"}
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "questions" ("title", "body", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "l;mwwlkfgeflkg"], ["body", "klflgkndflkgnldfngdlgnd"], ["user_id", 1], ["created_at", "2016-03-23 16:59:51.953271"], ["updated_at", "2016-03-23 16:59:51.953271"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+Redirected to http://localhost:3000/questions/7
+Completed 302 Found in 6ms (ActiveRecord: 1.4ms)
+
+
+Started GET "/questions/7" for ::1 at 2016-03-23 12:59:51 -0400
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mQuestion Load (1.1ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 7]]
+  [1m[35mAnswer Load (0.3ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1  ORDER BY "answers"."created_at" ASC  [["question_id", 7]]
+  Rendered questions/show.html.erb within layouts/application (5.4ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 29ms (Views: 15.7ms | ActiveRecord: 3.3ms)
+
+
+Started POST "/questions/7/answers" for ::1 at 2016-03-23 12:59:54 -0400
+Processing by AnswersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3q0Pq2/7JwwXsYqNy/ChOBU6Xq0SsHP3xWHnpDHP7tOIyjMhNdVC56Kma/r+m1rkdXpP9pqsfWyv2MLGaF1PlA==", "answer"=>{"body"=>"fgkmdfklgmdlkfg"}, "commit"=>"Create Answer", "question_id"=>"7"}
+  [1m[35mQuestion Load (0.2ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 7]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36mAnswer Load (0.2ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1  ORDER BY "answers"."created_at" ASC[0m  [["question_id", 7]]
+  Rendered questions/show.html.erb within layouts/application (4.1ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+Completed 200 OK in 25ms (Views: 20.1ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/questions/7/answers" for ::1 at 2016-03-23 13:00:52 -0400
+Processing by AnswersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3q0Pq2/7JwwXsYqNy/ChOBU6Xq0SsHP3xWHnpDHP7tOIyjMhNdVC56Kma/r+m1rkdXpP9pqsfWyv2MLGaF1PlA==", "answer"=>{"body"=>"fgkmdfklgmdlkfg"}, "commit"=>"Create Answer", "question_id"=>"7"}
+  [1m[36mQuestion Load (0.1ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 7]]
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 4.1ms)
+
+NoMethodError (undefined method `id' for nil:NilClass):
+  app/controllers/answers_controller.rb:7:in `create'
+
+
+  Rendered /Users/Tommy/.rubies/ruby-2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.1ms)
+  Rendered /Users/Tommy/.rubies/ruby-2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /Users/Tommy/.rubies/ruby-2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/Tommy/.rubies/ruby-2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (55.5ms)
+  Rendered /Users/Tommy/.rubies/ruby-2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/Tommy/.rubies/ruby-2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/Tommy/.rubies/ruby-2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/Tommy/.rubies/ruby-2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/Tommy/.rubies/ruby-2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (46.9ms)
+  Rendered /Users/Tommy/.rubies/ruby-2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/Tommy/.rubies/ruby-2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/Tommy/.rubies/ruby-2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (105.3ms)
+
+
+Started POST "/questions/7/answers" for ::1 at 2016-03-23 13:01:56 -0400
+Processing by AnswersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3q0Pq2/7JwwXsYqNy/ChOBU6Xq0SsHP3xWHnpDHP7tOIyjMhNdVC56Kma/r+m1rkdXpP9pqsfWyv2MLGaF1PlA==", "answer"=>{"body"=>"fgkmdfklgmdlkfg"}, "commit"=>"Create Answer", "question_id"=>"7"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mQuestion Load (0.2ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 7]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (1.5ms)[0m  [1mINSERT INTO "answers" ("body", "question_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["body", "fgkmdfklgmdlkfg"], ["question_id", 7], ["user_id", 1], ["created_at", "2016-03-23 17:01:56.663248"], ["updated_at", "2016-03-23 17:01:56.663248"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+Redirected to http://localhost:3000/questions/7
+Completed 302 Found in 32ms (ActiveRecord: 6.8ms)
+
+
+Started GET "/questions/7" for ::1 at 2016-03-23 13:01:56 -0400
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mQuestion Load (0.2ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 7]]
+  [1m[35mAnswer Load (0.2ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1  ORDER BY "answers"."created_at" ASC  [["question_id", 7]]
+  Rendered questions/show.html.erb within layouts/application (3.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 19ms (Views: 17.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/foundation.min.self-8a245bb637bd4dcf10a76f112ebcdb735c60bd10feaba679a07a8692ed922db9.css?body=1" for ::1 at 2016-03-23 13:01:56 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-03-23 13:01:56 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-03-23 13:01:56 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-03-23 13:01:56 -0400
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2016-03-23 13:01:56 -0400
+
+
+Started POST "/questions/7/answers" for ::1 at 2016-03-23 13:01:59 -0400
+Processing by AnswersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Rw3uuN6PJwcD48O821bIkPuk51PappTwRqd3DDpDPjgRatIyhKFC7Lb0IsvuPTNMm+T2CFK6mmssHlJuY9Gffw==", "answer"=>{"body"=>"mndfkjngdfgdfgdfg"}, "commit"=>"Create Answer", "question_id"=>"7"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mQuestion Load (0.1ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 7]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "answers" ("body", "question_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["body", "mndfkjngdfgdfgdfg"], ["question_id", 7], ["user_id", 1], ["created_at", "2016-03-23 17:01:59.541567"], ["updated_at", "2016-03-23 17:01:59.541567"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+Redirected to http://localhost:3000/questions/7
+Completed 302 Found in 5ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/questions/7" for ::1 at 2016-03-23 13:01:59 -0400
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mQuestion Load (0.2ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 7]]
+  [1m[35mAnswer Load (0.7ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1  ORDER BY "answers"."created_at" ASC  [["question_id", 7]]
+  Rendered questions/show.html.erb within layouts/application (2.9ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 18ms (Views: 15.6ms | ActiveRecord: 1.1ms)
+
+
+Started DELETE "/questions/7" for ::1 at 2016-03-23 13:02:23 -0400
+Processing by QuestionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"zh+JMv3t+O0mLSeU/l30DXwd+mzHAekQoiAzq93QCsqYeLW4p8OdBpM6xuPLNg/RHF3rN08d54vImRbJhEKrjQ==", "id"=>"7"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mQuestion Load (0.6ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 7]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "questions" WHERE "questions"."id" = $1[0m  [["id", 7]]
+  [1m[35m (1.2ms)[0m  COMMIT
+Redirected to http://localhost:3000/
+Completed 302 Found in 7ms (ActiveRecord: 2.9ms)
+
+
+Started GET "/" for ::1 at 2016-03-23 13:02:23 -0400
+Processing by QuestionsController#index as HTML
+  [1m[36mQuestion Load (0.3ms)[0m  [1mSELECT "questions".* FROM "questions"  ORDER BY "questions"."created_at" DESC[0m
+  Rendered questions/index.html.erb within layouts/application (0.7ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+Completed 200 OK in 22ms (Views: 21.3ms | ActiveRecord: 0.5ms)
