@@ -14,7 +14,7 @@ class AnswersController < ApplicationController
       flash[:notice] = "You do not have permission to edit this question"
       redirect_to question_path(@question)
     else
-      Answer.update_all best: false
+      @answers.update_all best: false
       @best_answer.best = true
       @best_answer.save
       render 'questions/show'

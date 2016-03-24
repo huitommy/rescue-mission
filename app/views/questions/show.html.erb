@@ -2,7 +2,7 @@
   Title: <%= @question.title %>
 </h1>
 <p>
-  Question: <%= @question.body %>
+  Question: <%= markdown(@question.body) %>
 </p>
 
 
@@ -29,7 +29,7 @@
   <% if t.best %>
   *** Best answer ***
   <% end %>
-  <%= t.body %>
+  <%= markdown(t.body) %>
   <% unless t.best %>
     <%= link_to "Best", answer_path(t), method: :put %>
   <% end %>
@@ -54,4 +54,4 @@
 <p>
   <%= link_to "Delete Question", @question, method: :delete, data: { confirm: "Are you sure?" } %>
 </p>
-<a href="/">Go back to Questions page</a>
+<a href="/">Go back to questions page</a>

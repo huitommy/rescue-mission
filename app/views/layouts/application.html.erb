@@ -19,12 +19,10 @@
     </div>
 
     <% if flash.any? %>
-    <div class="flash">
-      <div class="container">
-        <%= flash[:notice] %>
-      </div>
-    </div>
-    <% end %>
+   <div class="alert callout">
+       <strong><%= flash[:notice] %></strong>
+   </div>
+   <% end %>
 
 
   <div class="container">
