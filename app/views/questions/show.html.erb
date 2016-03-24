@@ -1,50 +1,38 @@
 <h1>
-  Title: <%= @question.title %>
+  Title:
+  <%= @question.title %>
 </h1>
 <p>
-  Question: <%= markdown(@question.body) %>
+  Question:
+  <%= markdown(@question.body) %>
 </p>
 
-
-
-<h1>Answers:</h1>
+<% if @answers.any? %>
+  <h2> Current Answers: </h2>
+<% end %>
 
 <%= form_for [@question, @answer] do |f| %>
 
-<% if @answer.errors.any? %>
-<div id="error_explanation">
-  <h2><%= pluralize(@answer.errors.count, "error") %>
-    prohibited this question from being saved:</h2>
-
-  <ul>
-    <% @answer.errors.full_messages.each do |message| %>
-    <li><%= message %></li>
+  <% @answers.each do |answer| %>
+  <p>
+    <% unless answer.best %>
+    <%= link_to "Best", answer_path(answer), method: :put %>
     <% end %>
-  </ul>
-</div>
-<% end %>
 
-<% @answers.each do |t| %>
-<p>
-  <% if t.best %>
-  *** Best answer ***
+    <% if answer.best %>
+    *** Best answer ***
+    <% end %>
+    <%= markdown(answer.body) %>
+  </p>
   <% end %>
-  <%= markdown(t.body) %>
-  <% unless t.best %>
-    <%= link_to "Best", answer_path(t), method: :put %>
-  <% end %>
-</p>
-<% end %>
 
+  <div class="field">
+    <%= f.text_field :body %>
+  </div>
 
-<div class="field">
-  <%= f.label :description, "Answer" %><br>
-  <%= f.text_field :body %>
-</div>
-
-<div class="action">
-  <%= f.submit %>
-</div>
+  <div class="action">
+    <%= f.submit %>
+  </div>
 <% end %>
 
 <br/>

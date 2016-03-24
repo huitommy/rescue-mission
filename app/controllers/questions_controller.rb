@@ -27,6 +27,7 @@ class QuestionsController < ApplicationController
       flash[:notice] = 'Question was created noticefully!'
       redirect_to(@question)
     else
+      flash[:notice] = @question.errors.full_messages.join(", ")
       render :new
     end
   end
@@ -52,6 +53,7 @@ class QuestionsController < ApplicationController
       flash[:notice] = 'Question was updated noticefully!'
       redirect_to(@question)
     else
+      flash[:notice] = @question.errors.full_messages.join(", ")
       render :edit
     end
   end
